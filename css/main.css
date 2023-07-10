@@ -1,0 +1,64 @@
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {padding: 0; margin: 0;}
+li {list-style: none;}
+a {text-decoration: none; color: #fff;}
+
+.container {
+    width: 1300px; height: 747px;
+    margin: 70px auto 0px;
+    background: url(../images/landing_bg.png) no-repeat;
+    background-size: cover;
+}
+.container .header {
+    display: flex;
+    justify-content: space-between; 
+    height: 80px;
+    border-bottom: 1px solid #fff;
+}
+.container .header .header_left {display: flex;}
+.container .header .logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 70px 0px 50px;
+}
+.container .header .logo p {
+    font-family: 'Bookk Myungjo';
+    font-size: 30px;
+    color: #fff;
+}
+.container .header .logo p:last-child {
+    font-size: 12px;
+    margin: 5px 0px;
+}
+.container .header ul {overflow: hidden;}
+.container .header ul li {
+    float: left; 
+    cursor: pointer;
+}
+.container .header #lnb {
+    font-family: 'Bookk Myungjo';
+    font-size: 18px;
+}
+.container .header #lnb li {
+    color: #fff;
+    margin: 43px 45px 0px 0px;
+}
+.container .header .login {
+    float: right;
+    font-family: 'Pretendard-Regular';
+    padding: 40px 75px 0px 0px;
+}
+.container .header .login li {
+    border: 1px solid #fff;
+    border-radius: 3px;
+    padding: 1px 3px;
+    margin-right: 20px; 
+}

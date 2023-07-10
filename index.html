@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./font/stylesheet.css">
+    <title>조 말론 런던 공식 온라인 부티크</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', ()=>{
+            const btn01 = document.getElementById('btn_01')
+            const btn02 = document.getElementById('btn_02')
+            
+            btn01.addEventListener('mouseover', changeBtn)
+            btn02.addEventListener('mouseover', changeBtn)
+            btn01.addEventListener('mouseout', resetBtn)
+            btn02.addEventListener('mouseout', resetBtn)
+
+            function changeBtn() {
+                this.style.border = '1px solid #000'
+                this.style.color = '#000'
+                this.style.transition = 'all 0.3s'
+            }
+            function resetBtn() {
+                this.style.border = '1px solid #fff'
+                this.style.color = '#fff'
+                this.style.transition = 'all 0.3s'
+            }
+
+            let lis = document.getElementById('lnb').getElementsByTagName('li')
+            
+            for(i=0; i<lis.length; i++) {
+                lis[i].addEventListener('mouseover',borderIn)
+                lis[i].addEventListener('mouseout',borderOut)
+
+                function borderIn() {
+                    this.style.borderBottom = '1px solid #fff'
+                    this.style.transition = 'all 0.3s'
+                }
+                function borderOut() {
+                    this.style.borderBottom = 'none'
+                    this.style.transition = 'all 0.3s'
+                }
+            }
+
+        })
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header_left">
+                <div class="logo">
+                    <p>JO MALONE</p>
+                    <p>LONDON</p>
+                </div>
+                <ul id="lnb">
+                    <li>new</li>
+                    <li>scent</li>
+                    <li>shop</li>
+                    <li>about</li>
+                </ul>
+            </div>
+            <ul class="login">
+                <a href="./login.html"><li id="btn_01">로그인</li></a>
+                <a href="./join.html"><li id="btn_02">회원가입</li></a>
+            </ul>
+        </header>
+    </div>
+</body>
+
+</html>
